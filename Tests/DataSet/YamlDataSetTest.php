@@ -84,7 +84,7 @@ asdflkjsadf asdfsadfhl "adsf, halsdf" sadfhlasdf'
 
         $expectedDataSet = new PHPUnit_Extensions_Database_DataSet_DefaultDataSet(array($table1, $table2, $emptyTable));
 
-        $yamlDataSet = new PHPUnit_Extensions_Database_DataSet_YamlDataSet(dirname(__FILE__) . '/../_files/YamlDataSets/testDataSet.yaml');
+        $yamlDataSet = new PHPUnit_Extensions_Database_DataSet_YamlDataSet(dirname(dirname(__FILE__)) . '/_files/YamlDataSets/testDataSet.yaml');
 
         PHPUnit_Extensions_Database_DataSet_YamlDataSet::write($yamlDataSet, sys_get_temp_dir() . '/yaml.dataset');
 

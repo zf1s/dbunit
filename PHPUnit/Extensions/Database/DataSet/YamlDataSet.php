@@ -54,7 +54,7 @@ class PHPUnit_Extensions_Database_DataSet_YamlDataSet extends PHPUnit_Extensions
      */
     public function addYamlFile($yamlFile)
     {
-        $data = $this->parser->parseYaml($yamlFile);
+        $data = $this->parser->parseYaml(file_get_contents($yamlFile));
 
         foreach ($data as $tableName => $rows) {
             if (!isset($rows)) {
