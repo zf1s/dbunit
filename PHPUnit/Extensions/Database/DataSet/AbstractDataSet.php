@@ -80,6 +80,7 @@ abstract class PHPUnit_Extensions_Database_DataSet_AbstractDataSet implements PH
      *
      * @return PHPUnit_Extensions_Database_DataSet_ITableIterator
      */
+    #[ReturnTypeWillChange]
     public function getIterator()
     {
         return $this->createIterator();
