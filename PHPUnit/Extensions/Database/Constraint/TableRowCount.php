@@ -39,7 +39,6 @@ class PHPUnit_Extensions_Database_Constraint_TableRowCount extends PHPUnit_Frame
      */
     public function __construct($tableName, $value)
     {
-        parent::__construct();
         $this->tableName = $tableName;
         $this->value = $value;
     }
