@@ -64,9 +64,6 @@ jobs:
 
       - name: "Run PHPUnit tests"
         env:
-          PHPUNIT_TESTSUITE_EXTENSION_DATABASE_MYSQL_DSN: "mysql:host=127.0.0.1;dbname=phpunit_tests;port=3306"
-          PHPUNIT_TESTSUITE_EXTENSION_DATABASE_MYSQL_USERNAME: "test"
-          PHPUNIT_TESTSUITE_EXTENSION_DATABASE_MYSQL_PASSWORD: "test"
           FAILURE_ACTION: "${{ matrix.experimental == true }}"
         run: |
-          bin/phpunit --configuration ./phpunit-no-coverage.xml || $FAILURE_ACTION;
+          bin/phpunit --configuration ./phpunit-ci-no-coverage.xml || $FAILURE_ACTION;
