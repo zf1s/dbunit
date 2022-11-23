@@ -26,7 +26,7 @@
     "require": {
         "php": ">=5.3.3",
         "zf1s/phpunit": "~3.7",
-        "symfony/yaml": "~2.1",
+        "symfony/yaml": "<7",
         "ext-pdo": "*",
         "ext-simplexml": "*"
     },
