@@ -102,6 +102,7 @@ class PHPUnit_Extensions_Database_DataSet_ReplacementTableIterator implements Ou
      *
      * @return PHPUnit_Extensions_Database_DataSet_ITable
      */
+    #[ReturnTypeWillChange]
     public function current()
     {
         return new PHPUnit_Extensions_Database_DataSet_ReplacementTable($this->innerIterator->current(), $this->fullReplacements, $this->subStrReplacements);
@@ -112,6 +113,7 @@ class PHPUnit_Extensions_Database_DataSet_ReplacementTableIterator implements Ou
      *
      * @return string
      */
+    #[ReturnTypeWillChange]
     public function key()
     {
         return $this->current()->getTableMetaData()->getTableName();
@@ -121,6 +123,7 @@ class PHPUnit_Extensions_Database_DataSet_ReplacementTableIterator implements Ou
      * advances to the next element.
      *
      */
+    #[ReturnTypeWillChange]
     public function next()
     {
         $this->innerIterator->next();
@@ -129,6 +132,7 @@ class PHPUnit_Extensions_Database_DataSet_ReplacementTableIterator implements Ou
     /**
      * Rewinds to the first element
      */
+    #[ReturnTypeWillChange]
     public function rewind()
     {
         $this->innerIterator->rewind();
@@ -139,6 +143,7 @@ class PHPUnit_Extensions_Database_DataSet_ReplacementTableIterator implements Ou
      *
      * @return bool
      */
+    #[ReturnTypeWillChange]
     public function valid()
     {
         return $this->innerIterator->valid();
