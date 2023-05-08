@@ -149,6 +149,7 @@ class PHPUnit_Extensions_Database_DataSet_ReplacementTableIterator implements Ou
         return $this->innerIterator->valid();
     }
 
+	#[ReturnTypeWillChange]
     public function getInnerIterator()
     {
         return $this->innerIterator;
