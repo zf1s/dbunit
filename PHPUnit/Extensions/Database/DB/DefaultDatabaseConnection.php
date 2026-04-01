@@ -84,8 +84,12 @@ class PHPUnit_Extensions_Database_DB_DefaultDatabaseConnection implements PHPUni
      * @return PHPUnit_Extensions_Database_DataSet_IDataSet
      * @todo Implement the filtered data set.
      */
-    public function createDataSet(array $tableNames = NULL)
+    public function createDataSet($tableNames = NULL)
     {
+        if ($tableNames !== NULL && !is_array($tableNames)) {
+            throw PHPUnit_Util_InvalidArgumentHelper::factory(1, 'array');
+        }
+
         if (empty($tableNames)) {
             return new PHPUnit_Extensions_Database_DB_DataSet($this);
         } else {

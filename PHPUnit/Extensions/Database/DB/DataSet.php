@@ -52,8 +52,12 @@ class PHPUnit_Extensions_Database_DB_DataSet extends PHPUnit_Extensions_Database
      * @param PHPUnit_Extensions_Database_DataSet_ITableMetaData $tableMetaData
      * @return unknown
      */
-    public static function buildTableSelect(PHPUnit_Extensions_Database_DataSet_ITableMetaData $tableMetaData, PHPUnit_Extensions_Database_DB_IDatabaseConnection $databaseConnection = NULL)
+    public static function buildTableSelect(PHPUnit_Extensions_Database_DataSet_ITableMetaData $tableMetaData, $databaseConnection = NULL)
     {
+        if ($databaseConnection !== NULL && !$databaseConnection instanceof PHPUnit_Extensions_Database_DB_IDatabaseConnection) {
+            throw PHPUnit_Util_InvalidArgumentHelper::factory(2, 'PHPUnit_Extensions_Database_DB_IDatabaseConnection');
+        }
+
         if ($tableMetaData->getTableName() == '') {
             $e = new Exception("Empty Table Name");
             echo $e->getTraceAsString();

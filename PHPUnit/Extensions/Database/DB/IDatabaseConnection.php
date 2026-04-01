@@ -35,7 +35,7 @@ interface PHPUnit_Extensions_Database_DB_IDatabaseConnection
      * @param array $tableNames
      * @return PHPUnit_Extensions_Database_DataSet_IDataSet
      */
-    public function createDataSet(Array $tableNames = NULL);
+    public function createDataSet($tableNames = NULL);
 
     /**
      * Creates a table with the result of the specified SQL statement.

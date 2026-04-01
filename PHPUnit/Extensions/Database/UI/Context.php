@@ -52,7 +52,7 @@ class PHPUnit_Extensions_Database_UI_Context
      */
     public function setModeArguments(array $arguments)
     {
-        $this->mode_arguments = $arguments;
+        $this->modeArguments = $arguments;
     }
 
     /**
@@ -60,7 +60,7 @@ class PHPUnit_Extensions_Database_UI_Context
      */
     public function getModeArguments()
     {
-        return $this->mode_arguments;
+        return $this->modeArguments;
     }
 }
 
